@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab - 1 Preguntas</title>
+</head>
+<body>
+    <h1> Laboratorio 1 - HTML</h1>
+    <nav>
+        <p> <b> Menú </b> </p>
+        <ul> 
+            <li> <a href="./index.html"> Inicio</a></li>
+            <li> <a href="./datos.html"> Datos </a> </li>
+            <li> <a href="./hobbies.html"> Pasatiempos </a></li>
+            <li> <a href="./music.html"> Música </a></li>
+            <li> <a href="./answers.html"> Preguntas</a></li>
+        </ul>
+    </nav>
+    <section> 
+        <h2> Preguntas </h2>
+        <ol>
+            <li>
+                <p> P: ¿Cuál es la diferencia entre Internet y la World Wide Web (WWW)?</p>
+                <p> R: Internet es una red de computadoras conectadas y WWW es una 
+                    colección de páginas sobre esas computadoras
+                </p>
+            </li>
+
+            <li> 
+                <p>P: ¿Cuáles son las partes de un URL?</p>
+                <p>R: Se compone de los siguientes elementos:</p>
+                <ol>
+                    <li> Protocolo de comunicación </li>
+                    <li> Dominio </li>
+                    <li> Ruta (carpeta y archivo)</li>
+                    <li> Parámetros</li>
+                </ol>
+            </li>
+
+            <li> 
+                <p>P: ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</p>
+                <p> R: Sus propósitos son: </p>
+                <ol>
+                    <li>
+                        <p> GET: Solicita datos al servidor. </p>
+                    </li>
+
+                    <li>
+                        <p> HEAD: Verifica si un recurso existe. Devuelve solo encabezados.</p>
+                    </li>
+
+                    <li>
+                        <p> POST: Envía datos al servidor para crear un nuevo recurso. </p>
+                    </li>
+
+                    <li> 
+                        <p> PUT: Modifica o reemplaza un recurso existente. </p>
+                    </li>
+
+                    <li>
+                        <p> PATCH: Modifica parcialmente un recurso existente. </p>
+                    </li>
+
+                    <li>
+                        <p> DELETE: Elimina un recurso. </p>
+                    </li>
+                </ol>
+            </li>
+
+            <li> 
+                <p>P: ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+                </p>
+                <p>
+                    A: POST los envía en el cuerpo de la solicitud, lo que los hace menos visibles y más seguros.
+                </p>
+            </li>
+
+            <li> 
+                <p>P: ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?
+                </p>
+                <p>
+                    A: GET solicita datos del servidor pero no realiza cambios en él.
+                </p>
+            </li>
+
+            <li> 
+                <p>P: Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?
+                </p>
+                <p>
+                    A: Indica que se recibió, procesó y se realizó correctamente una solicitud. 
+                </p>
+            </li>
+
+            <li>
+                <p>P: ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?
+                </p>
+                <p>
+                    A: El error 404 indica que el recurso no fue encontrado. Sin embargo el error debe repararse siempre y cuando
+                    la causa del mismo no sea que el usuario ha escrito mal la URL. 
+                </p>
+                <p>
+                    Esto porque todas las demás causas indican que hay un error del lado del servidor. 
+                </p>
+            </li>
+
+            <li>
+                <p>P: ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?
+                </p>
+                <p>
+                    A: Este código dice que existe un problema interno en el servidor, por lo que si es responsabilidad 
+                    del desarrollador repararlo. 
+                </p>
+            </li>
+            
+            <li>
+                <p>P: ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.
+                </p>
+                <p>
+                    A: El término depreciado o desaprobado quiere decir que esa etiqueta no es recomendada para
+                    para usarse ya que existen mejores opciones para lograr el mismo resultado. 
+                </p>
+                <p>
+                    La mayoría de los atributos depreciados tienen que ver con el estilo. 
+                </p>
+                <p> Algunos ejemplos son: </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b> font: </b> sustituido por los atributos font en CSS.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b> center: </b> sustituido por text-align en CSS.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b> big </b> y <b> small: </b> se recomienda modificar tamaños en CSS.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <p>P: ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?
+                </p>
+                <p>
+                    A: Las principales diferencias son:  
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b> Semántica: </b> antes se usaba div y span y ahora existen etiquetas especializadas para dividir el contenido. 
+                        </p>
+                    </li>
+                    <li>
+                        <p> 
+                            <b> Soporte multimedia: </b> antes se necesitaba de flash para reproducir vídeos e imágenes.
+                        </p>
+                    </li>
+                    <li> 
+                        <p> 
+                            <b> Inputs de formularios: </b> ahora existen tipos de datos especiales en los formularios.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <p>P: ¿Qué componentes de estructura y estilo tiene una tabla?
+                </p>
+                <p>
+                    A: La esructura que sigue una tabla en HTML es: 
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b> table: </b> es el cuerpo principal de la tabla.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>tr: </b> define una fila en la tabla.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>th: </b> define una columna en la tabla.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>td: </b> define una celda de datos. 
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2> Referencias: </h2>
+        <ul>
+            <li>
+                <p>
+                    BBC. (2019, March 12). ¿Cuál es la diferencia entre internet y la web? (y por qué muchos las confunden). BBC News Mundo. https://www.bbc.com/mundo/noticias-47538812
+                </p>
+            </li>
+            <li>
+                <p>
+                    Lista de códigos de estado HTTP ? Códigos de error HTTP explicados. (2021, January 20). https://www.dotcom-monitor.com/wiki/es/knowledge-base/http-status-codes/
+                </p>
+            </li>
+            <li>
+                <p>
+                    Barron, B. (2021, April 8). HTML vs HTML5: Conoce las diferencias cruciales entre ellos. Kinsta®. https://kinsta.com/es/blog/html-vs-html5/
+                </p>
+            </li>
+            <li>
+                <p>
+                    W3Schools.com. (n.d.). https://www.w3schools.com/html/html_tables.asp
+                </p>
+            </li>
+        </ul>
+
+
+    </section>
+    
+
+    <footer>
+        <p>Editor usado: </p>
+        <p> <a href="https://code.visualstudio.com/"> Visual Studio Code</a></p>
+    </footer>
+</body>
+</html>
