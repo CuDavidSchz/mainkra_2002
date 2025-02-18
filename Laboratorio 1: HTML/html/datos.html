@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab - 1 Datos</title>
+    <title>Laboratorios</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1> Laboratorio 1 - HTML</h1>
-    <nav>
-        <p> <b> Menú </b> </p>
-        <ul> 
-            <li> <a href="/index.html"> Inicio</a></li>
-            <li> <a href="./datos.html"> Datos </a> </li>
-            <li> <a href="./hobbies.html"> Pasatiempos </a></li>
-            <li> <a href="./music.html"> Música </a></li>
-            <li> <a href="./answers.html"> Preguntas</a></li>
-        </ul>
-    </nav>
+    <main>
+        <div id="content-wrap">
+            <h1> Laboratorios </h1>
+            <nav>
+                <p id="menu">Menú</p>
+                <ul id="menu-list"> 
+                    <li> <a href="/index.html"> Inicio</a></li>
+                    <li> <a href="./datos.html"> Datos </a> </li>
+                    <li> <a href="./hobbies.html"> Pasatiempos </a></li>
+                    <li> <a href="./music.html"> Música </a></li>
+                    <li> <a href="./answers.html"> Preguntas Lab - 1 HTML </a></li>
+                    <li> <a href="./answers-lab2.html"> Preguntas Lab - 2 CSS </a></li>
+                </ul>
+            </nav>
 
-    <section> 
-        <h3> Datos </h3>
-        <p> Matrícula: A01712135</p>
-        <p> Correo: A01712135@tec.mx</p>
-    </section>
+            <section id="data-section"> 
+                <div class="container">
+                    <h2 class="page-title"> Datos </h2> 
+                </div>
+                <div id="data">
+                    <p> <b> Matrícula:</b> A01712135</p>
+                    <p> <b>Correo:</b> A01712135@tec.mx</p>
+                </div>
+            </section>
+        </div>
 
-    <footer>
-        <p>Editor usado: </p>
-        <p> <a href="https://code.visualstudio.com/"> Visual Studio Code</a></p>
-    </footer>
+        <footer>
+            <p>Editor usado: </p>
+            <p> <a href="https://code.visualstudio.com/"> Visual Studio Code</a></p>
+        </footer>
+    </main>
 </body>
 </html>

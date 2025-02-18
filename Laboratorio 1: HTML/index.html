@@ -3,31 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab - 1 Inicio</title>
+    <title>Laboratorios A01712135</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 <body>
-    <h1> Laboratorio 1 - HTML</h1>
-    <section>
-        <h2> Mi nombre es David Cu </h2>
-        <p> No presumo mis logros porque no tengo jaja </p>
-        
+    <main>
+        <div id="content-wrap">
+            <h1> Laboratorios </h1>
 
-    </section>
-    <nav>
-        <p> <b> Menú </b> </p>
-        <ul> 
-            <li> <a href="./index.html"> Inicio</a></li>
-            <li> <a href="./html/datos.html"> Datos </a> </li>
-            <li> <a href="./html/hobbies.html"> Pasatiempos </a></li>
-            <li> <a href="./html/music.html"> Música </a></li>
-            <li> <a href="./html/answers.html"> Preguntas</a></li>
-        </ul>
-    </nav>
+            
+            <nav>
+                <p id="menu">Menú</p>
+                <ul id="menu-list"> 
+                    <li> <a href="./index.html"> Inicio</a></li>
+                    <li> <a href="./html/datos.html"> Datos </a> </li>
+                    <li> <a href="./html/hobbies.html"> Pasatiempos </a></li>
+                    <li> <a href="./html/music.html"> Música </a></li>
+                    <li>
+                        <select id="laboratorios">
+                            <option value="" disabled selected>Laboratorios</option>
+                            <option value="./html/qLab1.html">Lab - 1 HTML</option>
+                            <option value="./html/qLab2.html">Lab - 2 CSS</option>
+                        </select>
+                    </li>
+                <!--
+                    <li> <a href="./html/answers.html"> Preguntas Lab - 1 HTML </a></li>
+                    <li> <a href="./html/answers-lab2.html"> Preguntas Lab - 2 CSS </a></li>
+                -->
+                </ul>
+            </nav>
 
+            <section id="presentation">
+                <h2> Mi nombre es David Cu </h2>
+                <p> No presumo mis logros porque no tengo jaja </p>
+            </section>
+        </div>
 
-    <footer>
-        <p>Editor usado: </p>
-        <p> <a href="https://code.visualstudio.com/"> Visual Studio Code</a></p>
-    </footer>
+        <footer>
+            <p>Editor usado: </p>
+            <p> <a href="https://code.visualstudio.com/"> Visual Studio Code</a></p>
+        </footer>
+
+    </main>
 </body>
 </html>
