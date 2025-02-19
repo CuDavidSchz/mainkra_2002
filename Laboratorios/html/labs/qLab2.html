@@ -39,22 +39,58 @@
 
             <section class="questions"> 
                 <h2> Preguntas Laboratorio 2 - CSS </h2>
-                <ol>
-                    
+                <ol class="questions-list">
+                    <li>
+                        Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? 
+                        <p> Es una regla de estilo que no debería ser usada muy seguido porque quiere decir que la jerarquía 
+                            de elementos está mal distribuida y puede hacer más difícil el mantemiento. 
+                        </p>
+                    </li>
+
+                    <li>
+                        Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado? 
+                        <p> Puede causar que el sitio tarde demasiado en abrir y procesarse. Además, la mayoría de efectos
+                            pueden ser logrados através de CSS puro o con ayuda de frameworks de estilo.
+                        </p>
+                        <p>
+                            Sin embargo, aveces es necesaria para darle ciertos efectos a la página. En estos casos se 
+                            recomienda hacer la imagen a la medida para facilitar la implementación.
+                        </p>
+                    </li>
+
+                    <li>
+                        Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?
+                        <p> Cada una tiene sus usos específicos: <br>
+                            <br>
+                            <strong>%:</strong> Sirve para que las proporciones de los elementos sean responsivas. 
+                            Esto quiere decir que se adaptan a varios tamaños de pantallas. <br>
+                            <br>
+                            <strong>px:</strong> Es para los elementos que necesitan medidas fijas. Algunos usos serían los logos. <br>
+                            <br>
+                            <strong>pt:</strong> No se recomienda usar en el diseño web, sino en impresión. <br>
+                        </p>
+                    </li>
+
+                    <li>
+                        ¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio? 
+                        <p> Ayuda porque tiene menos caracteres innecesarios lo que facilita la transferencia de la hoja de estilos 
+                            desde donde está alojado hasta para la lectura del mismo para la interpretación. 
+                        </p>
+                    </li>
                 </ol>
             </section>
 
-            <section>
+            <section class="references">
                 <h2> Referencias: </h2>
                 <ul>
                     <li>
                         <p>
-                            BBC. (2019, March 12). ¿Cuál es la diferencia entre internet y la web? (y por qué muchos las confunden). BBC News Mundo. https://www.bbc.com/mundo/noticias-47538812
+                            Declaración !important en CSS. (n.d.). DesarrolloWeb.com. https://desarrolloweb.com/articulos/declaracion-important-css.html
                         </p>
                     </li>
                     <li>
                         <p>
-                            Lista de códigos de estado HTTP ? Códigos de error HTTP explicados. (2021, January 20). https://www.dotcom-monitor.com/wiki/es/knowledge-base/http-status-codes/
+                            ¿Cuándo se debería usar img y cuando background-image? (n.d.). Stack Overflow En Español. https://es.stackoverflow.com/questions/24511/cu%C3%A1ndo-se-deber%C3%ADa-usar-img-y-cuando-background-image
                         </p>
                     </li>
                     <li>
@@ -64,7 +100,7 @@
                     </li>
                     <li>
                         <p>
-                            W3Schools.com. (n.d.). https://www.w3schools.com/html/html_tables.asp
+                            Valores y unidades CSS - Aprende desarrollo web | MDN. (n.d.). MDN Web Docs. https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units
                         </p>
                     </li>
                 </ul>

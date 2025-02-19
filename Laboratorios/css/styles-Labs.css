@@ -2,4 +2,38 @@
 .questions {
     margin-top: 50px;
     margin-bottom: 50px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    
+}
+
+.questions h2 {
+    color: whitesmoke;
+}
+.questions-list {
+    margin-top: 30px;
+    padding: 0;
+
+    list-style-position: inside;
+}
+
+.questions li {
+    margin-top: 15px;
+    padding: 10px;
+
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.questions li p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 18px;
+}
+
+.references {
+    padding-bottom: 50px;
 }
