@@ -18,12 +18,21 @@
             <nav>
                 <p id="menu">Menú</p>
                 <ul id="menu-list"> 
-                    <li> <a href="/index.html"> Inicio</a></li>
-                    <li> <a href="./datos.html"> Datos </a> </li>
-                    <li> <a href="./hobbies.html"> Pasatiempos </a></li>
-                    <li> <a href="./music.html"> Música </a></li>
-                    <li> <a href="./answers.html"> Preguntas Lab - 1 HTML </a></li>
-                    <li> <a href="./answers-lab2.html"> Preguntas Lab - 2 CSS </a></li>
+                    <li> <a href="/Laboratorios/index.html"> Inicio</a></li>
+                    <li> <a href="/Laboratorios/html/presentation/datos.html"> Datos </a> </li>
+                    <li> <a href="/Laboratorios/html/presentation/hobbies.html"> Pasatiempos </a></li>
+                    <li> <a href="/Laboratorios/html/presentation/music.html"> Música </a></li>
+                    <li>
+                        <select name="laboratorios" id="laboratorios">
+                            <option value="" disabled selected>Laboratorios</option>
+                            <option value="/Laboratorios/html/labs/qLab1.html">1 .- HTML</option>
+                            <option value="/Laboratorios/html/labs/qLab2.html">2 .- CSS</option>
+                        </select>
+                    </li>
+                <!--
+                    <li> <a href="./html/answers.html"> Preguntas Lab - 1 HTML </a></li>
+                    <li> <a href="./html/answers-lab2.html"> Preguntas Lab - 2 CSS </a></li>
+                -->
                 </ul>
             </nav>
 
@@ -35,7 +44,7 @@
                 <p> Me encanta subir cerros. Subí en Pico de Orizaba y ahora quiero
                     tener una granja en el monte y abandonar todo.
                 </p>
-                <img src="/images/montanismo.jpeg" alt="Cu_hiking" width="300" height="400">
+                <img src="/Laboratorios/images/montanismo.jpeg" alt="Cu_hiking" width="300" height="400">
             </li>
             
             <li>
@@ -43,7 +52,7 @@
                 <p> Me gusta mucho Yamaha, solo por el estilo y su logo porque son una 
                     empresa en decadencia que le importa poco sus usuarios jajaja
                 </p>
-                <img src="/images/yamaha_r6.jpeg" alt="Yamaha R6" width="300" height="300">
+                <img src="/Laboratorios/images/yamaha_r6.jpeg" alt="Yamaha R6" width="300" height="300">
 
             </li>
             
@@ -52,14 +61,14 @@
                 <p> Comencé a practicarlas porque un amigo me convenció. Si no estuviera
                     en la universidad, seguramnete estaría entrenando para ir a UFC. 
                 </p>
-                <img src="/images/mma.jpeg" alt="MMA Group" width="300" height="400">
+                <img src="/Laboratorios/images/mma.jpeg" alt="MMA Group" width="300" height="400">
             </li>
             
             <li>
                 <h3> PC Modding </h3>
                 <p> Me encanta armar y diseñar cosas. Una de ellas es modificar computadoras
                 </p>
-                <img src="/images/pcmodding.jpeg" alt="PC modified" width="300" height="400">
+                <img src="/Laboratorios/images/pcmodding.jpeg" alt="PC modified" width="300" height="400">
             </li>
         </ul>
     </section>
@@ -68,5 +77,8 @@
         <p>Editor usado: </p>
         <p> <a href="https://code.visualstudio.com/"> Visual Studio Code</a></p>
     </footer>
+
+    <script src="/Laboratorios/js/script_principal.js"></script>
+    
 </body>
 </html>

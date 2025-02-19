@@ -8,7 +8,7 @@ body {
     background-color: #1f1f1f;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; 
+    min-height: 100vh; 
     margin: 0 auto;
     max-width: 50em; 
     
@@ -72,6 +72,9 @@ nav {
 
 }
 
+#menu-list li {
+    margin: 0 10;
+}
 #menu-list li a {
     text-decoration: none;
     color: whitesmoke;
@@ -82,6 +85,14 @@ nav {
 #menu-list li a:hover {
     background-color: #555;
     border-radius: 5px;
+}
+
+#menu-list select {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 
