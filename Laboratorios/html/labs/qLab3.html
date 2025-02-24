@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3</title>
+    <title>Laboratorios</title>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     
@@ -31,60 +31,82 @@
                         <select name="laboratorios" id="laboratorios">
                             <option value="" disabled selected>Laboratorios</option>
                             <option value="/Laboratorios/html/labs/qLab1.html">1 .- HTML</option>
-                            <option value="/Laboratorios/html/labs/qLab2.html">2 .- CSS</option>
-                            <option value="/Laboratorios/html/labs/qLab3.html">3 .- JavaScript</option>
+                            <option value="/Laboratorios/html/labs/qLab3.html">3 .- CSS</option>
+                            <option value="/Laboratorios/html/labs/qLab4.html">4 .- JavaScript</option>
                             <option value="/Laboratorios/html/labs/qLab5.html">5 .- Frameworks De Estilo</option>
                         </select>
                     </li>
                 </ul>
             </nav>
 
-            <section class="sandbox">
-                <h2> Programas con JavaScript</h2>
-                <div>
-                    <h3>Programa 1: </h3>
-                    <p> Calcular los cuadrados y cubos de 1 a n. </p>
-                    <form>
-                        <label for="pNumber1">
-                            <span>Introduce un número: </span>
-                            <input type="number" id="pNumber1">
-                        </label>
-                    </form>
-                </div>
-
-            </section>
             <section class="questions"> 
-                <h2> Preguntas Laboratorio 3 - JavaScript </h2>
+                <h2> Preguntas Laboratorio 2 - CSS </h2>
                 <ol class="questions-list">
                     <li>
-                        ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
-                        <p> Respuesta </p>
+                        Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? 
+                        <p> Es una regla de estilo que no debería ser usada muy seguido porque quiere decir que la jerarquía 
+                            de elementos está mal distribuida y puede hacer más difícil el mantemiento. 
+                        </p>
                     </li>
 
                     <li>
-                        ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
-                        <p> Respuesta </p>
+                        Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado? 
+                        <p> Puede causar que el sitio tarde demasiado en abrir y procesarse. Además, la mayoría de efectos
+                            pueden ser logrados através de CSS puro o con ayuda de frameworks de estilo.
+                        </p>
+                        <p>
+                            Sin embargo, aveces es necesaria para darle ciertos efectos a la página. En estos casos se 
+                            recomienda hacer la imagen a la medida para facilitar la implementación.
+                        </p>
                     </li>
 
-                    <li> ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
-                        <p> Respuesta </p>
+                    <li>
+                        Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?
+                        <p> Cada una tiene sus usos específicos: <br>
+                            <br>
+                            <strong>%:</strong> Sirve para que las proporciones de los elementos sean responsivas. 
+                            Esto quiere decir que se adaptan a varios tamaños de pantallas. <br>
+                            <br>
+                            <strong>px:</strong> Es para los elementos que necesitan medidas fijas. Algunos usos serían los logos. <br>
+                            <br>
+                            <strong>pt:</strong> No se recomienda usar en el diseño web, sino en impresión. <br>
+                        </p>
                     </li>
 
-                    <li> ¿Cómo se declara una variable con alcance local dentro de una función?
-                        <p> Respuesta </p>
+                    <li>
+                        ¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio? 
+                        <p> Ayuda porque tiene menos caracteres innecesarios lo que facilita la transferencia de la hoja de estilos 
+                            desde donde está alojado hasta para la lectura del mismo para la interpretación. 
+                        </p>
                     </li>
-
-                    <li> ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
-                        <p> Respuesta </p>
-                    </li>
-
                 </ol>
             </section>
 
             <section class="references">
                 <h2> Referencias: </h2>
                 <ul>
+                    <li>
+                        <p>
+                            Declaración !important en CSS. (n.d.). DesarrolloWeb.com. https://desarrolloweb.com/articulos/declaracion-important-css.html
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            ¿Cuándo se debería usar img y cuando background-image? (n.d.). Stack Overflow En Español. https://es.stackoverflow.com/questions/24511/cu%C3%A1ndo-se-deber%C3%ADa-usar-img-y-cuando-background-image
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Barron, B. (2021, April 8). HTML vs HTML5: Conoce las diferencias cruciales entre ellos. Kinsta®. https://kinsta.com/es/blog/html-vs-html5/
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Valores y unidades CSS - Aprende desarrollo web | MDN. (n.d.). MDN Web Docs. https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units
+                        </p>
+                    </li>
                 </ul>
+
 
             </section>
         </div>
@@ -96,7 +118,6 @@
         </footer>
     </main>
     
-    <!-- Barra de navegación -->
     <script src="/Laboratorios/js/script_principal.js"></script>
 
 </body>
