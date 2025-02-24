@@ -58,24 +58,98 @@
                 <ol class="questions-list">
                     <li>
                         ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
-                        <p> Respuesta </p>
+                        <h3>Diferencias: </h3>
+                        <ul>
+                            <li>
+                                <strong>Java </strong> es un lenguaje compilado y fuertemente tipado, lo que quiere decir que se requiere especificar el tipo de dato que se está
+                                manejanfo al momento de declarar una variable. Por otro lado, <strong>JavaScript</strong> es un leguaje interpretado y dinámicamente tipado. 
+                            </li>
+
+                            <li>
+                                <strong>Java </strong> es un lenguaje orientado a objetos puro, mientras que <strong>JavaScript</strong> es un lenguaje que emula la programación 
+                                orientada a objetos con prototipos. 
+                            </li>
+
+                            <li>
+                                <strong>Java</strong> es usado para crear aplicaciones de escritorio, móviles y backend. Por otro lado <strong>JavaScript</strong> se enfoca en el desarrollo Web.
+                            </li>
+                        </ul>
+
+                        <h3> Semejanzas: </h3>
+                        <ul>
+                            <li>
+                                <strong>Compatibilidad: </strong> ambos lenguajes pueden ejecutarse en el navegador. 
+                            </li>
+                            <li>
+                                <strong>Nombre: </strong> ambos lenguajes tienen "Java" en el nombre, pero hasta ahí jaja. 
+                            </li>
+                        </ul>
                     </li>
 
                     <li>
                         ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
-                        <p> Respuesta </p>
+                        <p> Algunos métodos disponibles para Date son: </p>
+                        <ul>
+                            <li>
+                                <strong>getYear():</strong> Devuelve el año de la fecha.
+                            </li>
+                            <li>
+                                <strong>getMonth():</strong> Devuelve el mes del año. Desde enero como 0 hasta diciembre como 11.
+                            </li>
+                            <li>
+                                <strong>getDay():</strong> Devuelve el día de la semana. Desde domingo como 0 y sábado como 6.
+                            </li>
+                            <li>
+                                <strong>getDate():</strong> Devuelve el día del mes. 
+                            </li>
+                            <li>
+                                <strong>setHours():</strong> Cambia la hora, minutos, segundos y milisegundos de la fecha a la hora local. 
+                            </li>
+
+                        </ul>
                     </li>
 
                     <li> ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
-                        <p> Respuesta </p>
+                        <p> Algunos métodos de los arreglos son: </p>
+                        <ul>
+                            <li>
+                                <strong>pop():</strong> Elimina el último elemento y lo devuelve.
+                            </li>
+                            <li>
+                                <strong>shift():</strong> Elimina el primer elemento y lo devuelve. 
+                            </li>
+                            <li>
+                                <strong>unshift():</strong> Añadir un elemento al principio del arreglo.
+                            </li>
+                            <li>
+                                <strong>push(elemento):</strong> Agrega un elemento al final del arreglo.
+                            </li>
+                            <li>
+                                <strong>indexOf(elemento):</strong> Encontrar el índice de un elemento en el arreglo.
+                            </li>
+                        </ul>
                     </li>
 
                     <li> ¿Cómo se declara una variable con alcance local dentro de una función?
-                        <p> Respuesta </p>
+                        <ul>
+                            <li>
+                                Se usa <strong>let</strong> para que el alcance sólo sea dentro de la función.
+                            </li>
+                        </ul>
                     </li>
 
                     <li> ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
-                        <p> Respuesta </p>
+                        <p> Pueden ocurrir algunos errores como: </p>
+                        <ul>
+                            <li>
+                                <strong>Consumo de memoria:</strong> la variable seguirá en la memoria de la computadora
+                                porque se supone que será necesitada en el alcance global del programa.
+                            </li>
+                            <li>
+                                <strong>Detección de errores:</strong> en caso de ser usada en varias funciones que se ejecutan
+                                al mismo tiempo puede ocasionar errores difíciles de detectar debido a la sobreescritura de la misma.
+                            </li>
+                        </ul>
                     </li>
 
                 </ol>
@@ -84,6 +158,15 @@
             <section class="references">
                 <h2> Referencias: </h2>
                 <ul>
+                    <li>
+                        Coderslang: Become a Software Engineer. (2021, May 31). Java vs JavaScript. Key differences and similarities. DEV Community. https://dev.to/coderslang/java-vs-javascript-key-differences-and-similarities-33mo
+                    </li>
+                    <li>
+                        Array - JavaScript | MDN. (n.d.). MDN Web Docs. https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array
+                    </li>
+                    <li>
+                        Gramática y Tipos - JavaScript | MDN. (2024, July 28). MDN Web Docs. https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types
+                    </li>
                 </ul>
 
             </section>
