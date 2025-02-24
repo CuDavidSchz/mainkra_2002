@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 5</title>
+
+    <link rel="stylesheet" href="/Laboratorios/css/styles-nav.css">
+
+    <!-- B U L M A -->
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+
+</head>
+<body>
+        <section class="section">
+            <div class="container is-flex is-justify-content-center">
+                <h1 class="title">
+                    Laboratorio 5 - BULMA
+                </h1>
+            </div>
+        </section>
+        <div id="content-wrap">
+            <nav>
+                <p id="menu">Menú</p>
+                <ul id="menu-list"> 
+                    <li> <a href="/Laboratorios/index.html"> Inicio</a></li>
+                    <li> <a href="/Laboratorios/html/presentation/datos.html"> Datos </a> </li>
+                    <li> <a href="/Laboratorios/html/presentation/hobbies.html"> Pasatiempos </a></li>
+                    <li> <a href="/Laboratorios/html/presentation/music.html"> Música </a></li>
+                    <li>
+                        <select name="laboratorios" id="laboratorios">
+                            <option value="" disabled selected>Laboratorios</option>
+                            <option value="/Laboratorios/html/labs/qLab1.html">1 .- HTML</option>
+                            <option value="/Laboratorios/html/labs/qLab2.html">2 .- CSS</option>
+                            <option value="/Laboratorios/html/labs/qLab3.html">3 .- JavaScript</option>
+                            <option value="/Laboratorios/html/labs/qLab5.html">5 .- Frameworks De Estilo</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="section is-flex is-justify-content-center">
+            <form class="box">
+                <div class="field">
+                    <label class="label">Correo electrónico</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="e.g. alex@example.com" />
+                    </div>
+                </div>
+            
+                <div class="field">
+                    <label class="label">Contraseña</label>
+                    <div class="control">
+                        <input class="input" type="password" placeholder="Escribe tu contraseña" />
+                    </div>
+                </div>
+
+                <div class="control my-5">
+                    <label class="radio">
+                        <input type="radio" name="answer" />
+                        Recordarme
+                    </label>
+                </div>
+            
+                <div class="container is-flex is-flex-direction-column">
+                    <button class="button is-primary">Iniciar sesión</button>
+                    <button class="button is-text my-5">¿Olvidaste la contraseña?</button>
+                    <button class="button is-text">Ayuda</button>
+                </div>
+
+            </form>
+
+        </section>
+
+    <script src="/Laboratorios/js/script_principal.js"></script>
+
+</body>
+</html>

@@ -1,3 +1,34 @@
+/* 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sección de Sandbox
+
+*/
+
+.sandbox {
+    margin-top: 50px;
+
+    padding-top: 0;
+    padding: 25px;
+
+    border-radius: 10px;
+    background-color: #1f1f1f;
+}
+
+.sandbox h2 {
+    color:whitesmoke;
+}
+
+.sandbox h3 {
+    color:whitesmoke;
+}
+
+/* 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sección de Questions
+
+*/
 
 .questions {
     margin-top: 50px;
