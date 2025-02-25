@@ -1,5 +1,29 @@
 {
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "name": "principal",
+  "version": "1.0.0",
+  "description": "Laboratorios de TC2005B Laboratorio 11 25 - Feb - 2025",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuDavidSchz/mainkra_2002.git"
+  },
+  "keywords": [
+    "Laboratorio",
+    "11",
+    "David",
+    "Cu"
+  ],
+  "author": "David Cu Sánchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CuDavidSchz/mainkra_2002/issues"
+  },
+  "homepage": "https://github.com/CuDavidSchz/mainkra_2002#readme"
 }
