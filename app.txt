@@ -81,7 +81,7 @@
                 </h1>
                 `;
                 
-    const html_form = `<form action="/plantas/agregar" method="POST">
+    const html_form = `<form action="/agregar" method="POST">
                 <label for="nombre" class="label">Nombre de la planta</label>
                 <input
                     class="input is-info"
@@ -114,26 +114,69 @@
     </html>
     `;
 
-const express = require('express');
-const app = express();
+    const plantas = [];
 
-//Middleware
-app.use((request, response, next) => {
-    console.log('Middleware!');
-    next(); //Le permite a la petición avanzar hacia el siguiente middleware
-});
+    const http = require('http');
 
-// Especificar lo más específico a lo más general en el orden de los middlewares
-
-app.use("/plantas/agregar" , (request, response, next)=> {
-    response.send(html_header + html_form + html_footer)
-
-})
-
-app.use((request, response, next) => {
-    console.log('Otro middleware!');
-    response.send('¡Hola mundo!'); //Manda la respuesta
-});
-
-app.listen(3000);
+    const server = http.createServer( (request, response) => {  
     
+    if(request.method == "GET" && (request.url == "/agregar" || request.url == "/")) {
+        console.log(request.url);
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html_header + html_form + html_footer);
+        response.end();
+    } else if(request.method == "POST" && request.url == "/agregar") {
+        
+        const datos_completos = [];
+
+        request.on('data', (data)=>{
+        console.log(data);
+        datos_completos.push(data);
+        });
+
+        request.on('end', () => {
+        const string_datos_completos = Buffer.concat(datos_completos).toString();
+        console.log(string_datos_completos);
+        //split() separa un string por el parámetro recibido, 
+        //y cada parte la pone en un arreglo
+        const nueva_planta = string_datos_completos.split('=')[1];
+
+        //Si fueran 2 inputs:
+        //const nueva_planta = string_datos_completos.split('&')[0].split('=')[1];
+
+        plantas.push(nueva_planta);
+
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html_header);
+        
+        response.write(`<div class="columns">`);
+        for(const planta of plantas) {
+            response.write(`<div class="column">`);
+            response.write(`<div class="card">
+            <div class="card-content">
+                <div class="content">`);
+            response.write(planta);
+            response.write(`</div>
+                </div>
+            </div>`);
+            response.write(`</div>`);
+        }
+        response.write(`</div>`);
+
+        response.write(html_footer);
+        response.end();
+
+        });
+
+    } else {
+        response.statusCode = 404;
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html_header);
+        response.write('<div class="notification is-danger">La página no existe</div>');
+        response.write(html_footer);
+        response.end();
+    }
+        
+    });
+
+    server.listen(3000);
