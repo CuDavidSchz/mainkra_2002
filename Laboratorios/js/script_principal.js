@@ -9,14 +9,3 @@ document.getElementById("laboratorios").addEventListener("change", function() {
         window.location.href = url; 
     }
 });
-
-/*
-    Función del menú con BULMA  Mobile
-*/
-
-const burgerIcon = document.querySelector("#burger");
-const navbarMenu = document.querySelector("#nav-links");
-
-burgerIcon.addEventListener("click", () => {
-    navbarMenu.classList.toggle("is-active")
-});

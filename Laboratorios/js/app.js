@@ -1,20 +1,6 @@
-const file_system = require('fs');
-
-file_system.writeFileSync('hola.txt', 'Hola desde node');
-
-setTimeout(() => { console.log("jojo te hackié") }, 10000);
-
-const arreglo = [5000, 60, 90, 100, 10, 20, 10000, 0, 120, 2000, 340, 1000, 50];
-
-for (let item of arreglo) {
-    setTimeout(() => {
-        console.log(item);
-    }, item);
-} 
-
-const html_header = `
-<!DOCTYPE html>
-<html>
+    const html_header = `
+    <!DOCTYPE html>
+    <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,15 +55,15 @@ const html_header = `
                     <a class="navbar-item">
                     Report an issue
                     </a>
-                    </div>
+                </div>
                 </div>
             </div>
-
+        
             <div class="navbar-end">
                 <div class="navbar-item">
                 <div class="buttons">
                     <a class="button is-primary">
-                        <strong>Sign up</strong>
+                    <strong>Sign up</strong>
                     </a>
                     <a class="button is-light">
                     Log in
@@ -86,16 +72,16 @@ const html_header = `
                 </div>
             </div>
             </div>
-    </nav>
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                Invernadero
-            </h1>
-            `;
-const html_form = `
-            <form action="/agregar" method ="POST">
-                <label for ="nombre" class="label">Nombre de la planta</label>
+        </nav>
+        <section class="section">
+            <div class="container">
+                <h1 class="title">
+                    Invernadero
+                </h1>
+                `;
+                
+    const html_form = `<form action="/agregar" method="POST">
+                <label for="nombre" class="label">Nombre de la planta</label>
                 <input
                     class="input is-info"
                     type="text"
@@ -103,49 +89,93 @@ const html_form = `
                     id="nombre"
                     name="nombre"
                 />
-            
-            <input class="button is-info my-5"
-        </div>
-    </section> 
-    `;
+                <br><br>
+                <input class="button is-info" type="submit" value="Enviar">
+                </form>`;
 
-const html_footer = `
-    <footer class="footer">
-        <div class="content has-text-centered">
+    const html_footer = `</div>
+        </section>
+        <footer class="footer">
+            <div class="content has-text-centered">
             <p>
                 <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
                 The source code is licensed
                 <a href="https://opensource.org/license/mit">MIT</a>. The
                 website content is licensed
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0//"
-                    >CC BY NC SA 4.0</a
-                    >.
+                >CC BY NC SA 4.0</a
+                >.
             </p>
-        </div>
+            </div>
         </footer>
         <script src="js/introjs.js"></script>
     </body>
-</html>
-`;
+    </html>
+    `;
 
-const http = require('http');
+    const plantas = [];
 
-const server = http.createServer( (request, response) => {    
+    const http = require('http');
 
-    if(request.method == "GET" && (request.url == "agregar" || request.url == "/")) {
+    const server = http.createServer( (request, response) => {  
+    
+    if(request.method == "GET" && (request.url == "/agregar" || request.url == "/")) {
         console.log(request.url);
         response.setHeader('Content-Type', 'text/html');
         response.write(html_header + html_form + html_footer);
         response.end();
-    } else if (request.method == "POST" && request.url == "/agregar") {
-        response.statusCode == 404;
+    } else if(request.method == "POST" && request.url == "/agregar") {
+        
+        const datos_completos = [];
+
+        request.on('data', (data)=>{
+        console.log(data);
+        datos_completos.push(data);
+        });
+
+        request.on('end', () => {
+        const string_datos_completos = Buffer.concat(datos_completos).toString();
+        console.log(string_datos_completos);
+        //split() separa un string por el parámetro recibido, 
+        //y cada parte la pone en un arreglo
+        const nueva_planta = string_datos_completos.split('=')[1];
+
+        //Si fueran 2 inputs:
+        //const nueva_planta = string_datos_completos.split('&')[0].split('=')[1];
+
+        plantas.push(nueva_planta);
+
         response.setHeader('Content-Type', 'text/html');
         response.write(html_header);
-        response.write(`<h2 class="notificacion is-warning" La página no existe </h2>`);
-        response.write(html_footer);
-    } else {
         
-    }
-});
+        response.write(`<div class="columns">`);
+        for(const planta of plantas) {
+            response.write(`<div class="column">`);
+            response.write(`<div class="card">
+            <div class="card-content">
+                <div class="content">`);
+            response.write(planta);
+            response.write(`</div>
+                </div>
+            </div>`);
+            response.write(`</div>`);
+        }
+        response.write(`</div>`);
 
-server.listen(3000);
+        response.write(html_footer);
+        response.end();
+
+        });
+
+    } else {
+        response.statusCode = 404;
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html_header);
+        response.write('<div class="notification is-danger">La página no existe</div>');
+        response.write(html_footer);
+        response.end();
+    }
+        
+    });
+
+    server.listen(3000);
