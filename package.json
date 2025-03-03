@@ -1,0 +1,24 @@
+{
+  "name": "principal",
+  "version": "1.0.0",
+  "description": "> Written with [StackEdit](https://stackedit.io/).",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuDavidSchz/mainkra_2002.git"
+  },
+  "keywords": [],
+  "author": "David Cu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CuDavidSchz/mainkra_2002/issues"
+  },
+  "homepage": "https://github.com/CuDavidSchz/mainkra_2002#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
