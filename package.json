@@ -20,5 +20,8 @@
   "homepage": "https://github.com/CuDavidSchz/mainkra_2002#readme",
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "parse": "^3.5.1"
   }
 }

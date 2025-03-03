@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const { parse } = require("querystring");
 
 const server = http.createServer((req, res) => {
     console.log(`Solicitud recibida: ${req.url}`);
@@ -15,8 +16,43 @@ const server = http.createServer((req, res) => {
         "/musica": "music.html",
     };
 
-    if (rutasHTML[req.url]) {
-        filePath = path.join(__dirname, "public", "html", "presentation", rutasHTML[req.url]);
+    if (req.method === "GET" && rutasHTML[req.url]) {
+        const filePath = path.join(__dirname, "public", rutasHTML[req.url]);
+        fs.readFile(filePath, (err, content) => {
+            if (err) {
+                res.writeHead(500, { "Content-Type": "text/html" });
+                res.end("<h1>Error 500: Error interno del servidor</h1>");
+            } else {
+                res.writeHead(200, { "Content-Type": "text/html" });
+                res.end(content);
+            }
+        });
+        return;
+    }
+
+    if (req.method === "POST" && req.url === "/enviar-datos") {
+        let body = "";
+
+        req.on("data", chunk => {
+            body += chunk.toString();
+        });
+
+        req.on("end", () => {
+            const datos = parse(body);
+
+            const contenido = `Nombre: ${datos.nombre}\n---\n`;
+
+            fs.appendFile("datos.txt", contenido, err => {
+                if (err) {
+                    res.writeHead(500, { "Content-Type": "text/html" });
+                    res.end("<h1>Error al guardar los datos</h1>");
+                } else {
+                    res.writeHead(200, { "Content-Type": "text/html" });
+                    res.end("<h1>Datos guardados correctamente</h1>");
+                }
+            });
+        });
+        return;
     }
 
     // Si la URL es un archivo CSS o JS, servimos con el tipo de contenido correcto
