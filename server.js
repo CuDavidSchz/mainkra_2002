@@ -1,80 +1,50 @@
-const http = require("http");
+const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const { parse } = require("querystring");
 
-const server = http.createServer((req, res) => {
-    console.log(`Solicitud recibida: ${req.url}`);
+const app = express();
+const PORT = 3000;
 
-    // Si el usuario está en la raíz, servimos index.html
-    let filePath = path.join(__dirname, "public", req.url === "/" ? "index.html" : req.url);
+app.use(express.urlencoded({ extended: true }));
 
-    // Si el usuario accede a rutas como "/datos", "/musica", "/pasatiempos"
-    const rutasHTML = {
-        "/datos": "datos.html",
-        "/pasatiempos": "hobbies.html",
-        "/musica": "music.html",
-    };
+app.post("/enviar-datos", (req, res) => {
+    const { nombre } = req.body;
 
-    if (req.method === "GET" && rutasHTML[req.url]) {
-        const filePath = path.join(__dirname, "public", rutasHTML[req.url]);
-        fs.readFile(filePath, (err, content) => {
-            if (err) {
-                res.writeHead(500, { "Content-Type": "text/html" });
-                res.end("<h1>Error 500: Error interno del servidor</h1>");
-            } else {
-                res.writeHead(200, { "Content-Type": "text/html" });
-                res.end(content);
-            }
-        });
-        return;
+    if (!nombre) {
+        return res.status(400).send("El campo no puede estar vacío.");
     }
 
-    if (req.method === "POST" && req.url === "/enviar-datos") {
-        let body = "";
+    const contenido = `Dato recibido: ${nombre}\n`;
 
-        req.on("data", chunk => {
-            body += chunk.toString();
-        });
-
-        req.on("end", () => {
-            const datos = parse(body);
-
-            const contenido = `Nombre: ${datos.nombre}\n---\n`;
-
-            fs.appendFile("datos.txt", contenido, err => {
-                if (err) {
-                    res.writeHead(500, { "Content-Type": "text/html" });
-                    res.end("<h1>Error al guardar los datos</h1>");
-                } else {
-                    res.writeHead(200, { "Content-Type": "text/html" });
-                    res.end("<h1>Datos guardados correctamente</h1>");
-                }
-            });
-        });
-        return;
-    }
-
-    // Si la URL es un archivo CSS o JS, servimos con el tipo de contenido correcto
-    const extname = path.extname(filePath);
-    let contentType = "text/html";
-    if (extname === ".css") contentType = "text/css";
-    if (extname === ".js") contentType = "text/javascript";
-    if (extname === ".png") contentType = "image/png";
-    if (extname === ".jpg" || extname === ".jpeg") contentType = "image/jpeg";
-
-    // Leer y servir el archivo
-    fs.readFile(filePath, (err, content) => {
+    fs.appendFile("datos-recibidos.txt", contenido, (err) => {
         if (err) {
-            res.writeHead(404, { "Content-Type": "text/html" });
-            res.end("<h1>Error 404: Página no encontrada</h1>");
-        } else {
-            res.writeHead(200, { "Content-Type": contentType });
-            res.end(content);
+            return res.status(500).send("Error al guardar los datos.");
         }
+        
+        res.redirect("/");
     });
 });
 
-server.listen(3000, () => {
-    console.log("Servidor corriendo en http://localhost:3000");
+const homeRoutes = require("./routes/home");
+app.use(homeRoutes);
+
+const laboratoriosRoutes = require("./routes/laboratorios");
+app.use(laboratoriosRoutes);
+
+// Archivos estáticos
+app.use(express.static("public"));
+
+// Ruta principal
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// Error
+app.use((req, res) => {
+    res.status(404).send("<h1>⚠ Error 404: Página no encontrada</h1>");
+});
+
+// Iniciar servidor
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

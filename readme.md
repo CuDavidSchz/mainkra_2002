@@ -14,7 +14,10 @@ Este archivo README contiene las actualizaciones que realice en esta clase divid
 
 - 2 - Marzo - 2025: **Laboratorio 8**
 Node.js redirige en las tres principales secciones de la página. La opción de barra de selección no funciona aún. Lo agregaré en otro laboratorio. 
-Para correr los programas solicitados es necesario correrlos en la carpeta: /js/labs/labs8-functions
+Para correr los programas solicitados es necesario correrlos en la carpeta: /js/labs/labs8-functions con el comando node nombre.js
+
+- 2 - Marzo - 2025: **Laboratorio 10**
+La página principal tiene una casilla para enviar un dato al servidor y este podrá guardarlo internamente. Además, se muestra el mensaje de si fue hecho con éxito o si hubo un error. 
 
 ## Programación en parejas
 
