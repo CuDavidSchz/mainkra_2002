@@ -1,0 +1,40 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Laboratorios
+                
+                include ../partials/navbar.pug
+
+                section
+                    h2 Mis pasatiempos son:
+                    ul
+                        li
+                            h3 Montañismo
+                            p Me encanta subir cerros. Subí en Pico de Orizaba y ahora quiero 
+                            | tener una granja en el monte y abandonar todo.
+                            img(src="/images/montanismo.jpeg", alt="Cu_hiking", width="300", height="400")
+
+                        li
+                            h3 Motociclismo
+                            p Me gusta mucho Yamaha, solo por el estilo y su logo porque son una
+                            | empresa en decadencia que le importa poco sus usuarios jajaja
+                            img(src="/images/yamaha_r6.jpeg", alt="Yamaha R6", width="300", height="300")
+
+                        li
+                            h3 Artes Marciales Mixtas
+                            p Comencé a practicarlas porque un amigo me convenció. Si no estuviera
+                            | en la universidad, seguramente estaría entrenando para ir a UFC.
+                            img(src="/images/mma.jpeg", alt="MMA Group", width="300", height="400")
+
+                        li
+                            h3 PC Modding
+                            p Me encanta armar y diseñar cosas. Una de ellas es modificar computadoras.
+                            img(src="/images/pcmodding.jpeg", alt="PC modified", width="300", height="400")
+
+                include ../partials/footer.pug
+
+        script(src="/js/script_principal.js")

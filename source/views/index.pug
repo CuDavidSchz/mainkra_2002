@@ -1,0 +1,25 @@
+doctype html
+html(lang="es")
+    include ./partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Sandbox
+                include ./partials/navbar.pug
+
+                section.presentation
+                    h2 Mi nombre es David Cu
+                    p Bienvenido a mis evidencias de TC2005B con Node.js
+
+                section.presentation
+                    h2 Probando enviar datos al servidor:
+                    form(action="/enviar-datos" method="POST")
+                        label(for="nombre") Envía un dato:
+                        input(type="text" id="nombre" name="nombre")
+                        br
+                        br
+                        button(type="submit") Enviar
+
+            include ./partials/footer.pug
+        script(src="/js/script_principal.js")

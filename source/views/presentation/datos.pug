@@ -1,0 +1,23 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Sandbox
+                include ../partials/navbar.pug
+
+                section#data-section
+                    div.container
+                        h2.page-title Datos
+                    div#data
+                        p 
+                            b Matrícula:
+                            | A01712135
+                        p 
+                            b Correo:
+                            | A01712135@tec.mx
+
+            include ../partials/footer.pug
+        script(src="/js/script_principal.js")

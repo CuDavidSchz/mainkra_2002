@@ -1,0 +1,114 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Laboratorios
+                
+                include ../partials/navbar.pug
+
+                section.questions
+                    h2 Preguntas Laboratorio 1 - HTML
+                    ol.questions-list
+                        li
+                            p P: ¿Cuál es la diferencia entre Internet y la World Wide Web (WWW)?
+                            p R: Internet es una red de computadoras conectadas y WWW es una 
+                            | colección de páginas sobre esas computadoras.
+
+                        li
+                            p P: ¿Cuáles son las partes de un URL?
+                            p R: Se compone de los siguientes elementos:
+                            ol
+                                li Protocolo de comunicación
+                                li Dominio
+                                li Ruta (carpeta y archivo)
+                                li Parámetros
+
+                        li
+                            p P: ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?
+                            p R: Sus propósitos son:
+                            ol
+                                li 
+                                    p GET: Solicita datos al servidor.
+                                li 
+                                    p HEAD: Verifica si un recurso existe. Devuelve solo encabezados.
+                                li 
+                                    p POST: Envía datos al servidor para crear un nuevo recurso.
+                                li 
+                                    p PUT: Modifica o reemplaza un recurso existente.
+                                li 
+                                    p PATCH: Modifica parcialmente un recurso existente.
+                                li 
+                                    p DELETE: Elimina un recurso.
+
+                        li
+                            p P: ¿Qué método HTTP se debe utilizar al enviar un formulario HTML?
+                            p A: POST los envía en el cuerpo de la solicitud, lo que los hace menos visibles y más seguros.
+
+                        li
+                            p P: ¿Qué método HTTP se utiliza cuando se accede a una página web a través de un URL?
+                            p A: GET solicita datos del servidor pero no realiza cambios en él.
+
+                        li
+                            p P: Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto?
+                            p A: Indica que se recibió, procesó y se realizó correctamente una solicitud.
+
+                        li
+                            p P: ¿Es responsabilidad del desarrollador corregir un error 404?
+                            p A: Si la causa no es un error del usuario al escribir la URL, sí debe corregirse.
+
+                        li
+                            p P: ¿Es responsabilidad del desarrollador corregir un error 500?
+                            p A: Sí, porque indica un problema interno en el servidor.
+
+                        li
+                            p P: ¿Qué significa que un atributo HTML5 esté desaprobado?
+                            p A: Quiere decir que existen mejores opciones para lograr el mismo resultado.
+                            p La mayoría de los atributos desaprobados tienen que ver con el estilo.
+                            p Algunos ejemplos son:
+                            ul
+                                li b font:  | Sustituido por CSS.
+                                li b center:  | Sustituido por text-align en CSS.
+                                li b big y small:  | Se recomienda modificar tamaños en CSS.
+
+                        li
+                            p P: ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?
+                            p A: Las principales diferencias son:
+                            ul
+                                li b Semántica:  | Ahora existen etiquetas especializadas para dividir el contenido.
+                                li b Soporte multimedia:  | Ya no se necesita Flash para reproducir vídeos e imágenes.
+                                li b Inputs de formularios:  | Ahora hay tipos de datos especiales en los formularios.
+
+                        li
+                            p P: ¿Qué componentes de estructura y estilo tiene una tabla?
+                            p A: La estructura de una tabla en HTML es:
+                            ul
+                                li b table:  | Es el cuerpo principal de la tabla.
+                                li b tr:  | Define una fila en la tabla.
+                                li b th:  | Define una columna en la tabla.
+                                li b td:  | Define una celda de datos.
+
+                section
+                    h2 Referencias:
+                    ul.references
+                        li
+                            p BBC. (2019). ¿Cuál es la diferencia entre internet y la web?
+                            p a(href="https://www.bbc.com/mundo/noticias-47538812") Enlace
+
+                        li
+                            p Lista de códigos de estado HTTP.
+                            p a(href="https://www.dotcom-monitor.com/wiki/es/knowledge-base/http-status-codes/") Enlace
+
+                        li
+                            p Barron, B. (2021). HTML vs HTML5: Conoce las diferencias.
+                            p a(href="https://kinsta.com/es/blog/html-vs-html5/") Enlace
+
+                        li
+                            p W3Schools.com.
+                            p a(href="https://www.w3schools.com/html/html_tables.asp") Enlace
+
+                include ../partials/footer.pug
+
+        script(src="/js/script_principal.js")

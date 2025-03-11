@@ -1,0 +1,39 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Laboratorios
+                
+                include ../partials/navbar.pug
+
+                section.questions
+                    h2 Preguntas Laboratorio 12 - HTML dinámico
+                    ol.questions-list
+                        li
+                            p P: ¿Qué otros templating engines existen para Node?
+                            p R: Existen varias opciones para lograr esto. Personalmente estoy usando Pug en lugar de EJS.
+                            ul
+                                li
+                                    p EJS: Permite incrustar JavaScript dentro de HTML y es fácil de usar, pero su sintaxis es más parecida a HTML tradicional.
+                                li
+                                    p Handlebars: Es una opción más estructurada con soporte para plantillas parciales y helpers, lo que lo hace más escalable.
+                                li
+                                    p Mustache: Un motor de plantillas minimalista que se enfoca en la simplicidad y la lógica de presentación sin ejecutar código.
+                                li
+                                    p Nunjucks: Creado por Mozilla, ofrece una sintaxis poderosa con herencia de plantillas y filtros avanzados.
+                                li
+                                    p Liquid: Usado por Shopify, es ideal para generación de contenido dinámico en sitios de comercio electrónico.
+
+                section
+                    h2 Referencias:
+                    ul.references
+                        li
+                            p Antonieta, Y. (2023, March 4). ¿Qué son los motores de render? Ctrl-y. https://ctrly.blog/es/motores-de-render/
+
+
+                include ../partials/footer.pug
+
+        script(src="/js/script_principal.js")

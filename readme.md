@@ -19,6 +19,9 @@ Para correr los programas solicitados es necesario correrlos en la carpeta: /js/
 - 2 - Marzo - 2025: **Laboratorio 10**
 La página principal tiene una casilla para enviar un dato al servidor y este podrá guardarlo internamente. Además, se muestra el mensaje de si fue hecho con éxito o si hubo un error. 
 
+- 11 - Marzo - 2025 **Laboratorio 12**
+Todos los archivos HTML exceptuando el laboratorio 5 están refactorizados y renderizados con el motor de PUG.
+
 ## Programación en parejas
 
 ### Laboratorio 9: Bases de Datos de Escritorio (MS Access)

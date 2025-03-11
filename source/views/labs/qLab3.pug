@@ -1,0 +1,69 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Laboratorios
+                
+                include ../partials/navbar.pug
+
+                section.questions
+                    h2 Preguntas Laboratorio 3 - CSS
+                    ol.questions-list
+                        li
+                            p Como ingeniero de software, ¿cuál es tu recomendación sobre el uso de !important en un CSS?
+                            p Es una regla de estilo que no debería ser usada muy seguido porque quiere decir que la jerarquía 
+                            | de elementos está mal distribuida y puede hacer más difícil el mantenimiento.
+
+                        li
+                            p Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?
+                            p Puede causar que el sitio tarde demasiado en abrir y procesarse. Además, la mayoría de efectos
+                            | pueden ser logrados a través de CSS puro o con ayuda de frameworks de estilo.
+                            p Sin embargo, a veces es necesaria para darle ciertos efectos a la página. En estos casos se 
+                            | recomienda hacer la imagen a la medida para facilitar la implementación.
+
+                        li
+                            p Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?
+                            p Cada una tiene sus usos específicos:
+                            br
+                            strong %: 
+                            | Sirve para que las proporciones de los elementos sean responsivas. 
+                            | Esto quiere decir que se adaptan a varios tamaños de pantallas.
+                            br
+                            br
+                            strong px: 
+                            | Es para los elementos que necesitan medidas fijas. Algunos usos serían los logos.
+                            br
+                            br
+                            strong pt: 
+                            | No se recomienda usar en el diseño web, sino en impresión.
+
+                        li
+                            p ¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?
+                            p Ayuda porque tiene menos caracteres innecesarios lo que facilita la transferencia de la hoja de estilos 
+                            | desde donde está alojado hasta para la lectura del mismo para la interpretación.
+
+                section.references
+                    h2 Referencias:
+                    ul
+                        li
+                            p Declaración !important en CSS. 
+                            p a(href="https://desarrolloweb.com/articulos/declaracion-important-css.html") Enlace
+
+                        li
+                            p ¿Cuándo se debería usar img y cuando background-image?
+                            p a(href="https://es.stackoverflow.com/questions/24511/cu%C3%A1ndo-se-deber%C3%ADa-usar-img-y-cuando-background-image") Enlace
+
+                        li
+                            p Barron, B. (2021). HTML vs HTML5: Conoce las diferencias.
+                            p a(href="https://kinsta.com/es/blog/html-vs-html5/") Enlace
+
+                        li
+                            p Valores y unidades CSS - Aprende desarrollo web | MDN.
+                            p a(href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units") Enlace
+
+                include ../partials/footer.pug
+
+        script(src="/js/script_principal.js")

@@ -1,0 +1,29 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Laboratorios
+                
+                include ../partials/navbar.pug
+
+                section#music-section
+                    .container
+                        h2.page-title Música
+                    p Me encanta escuchar música, algunas de mis bandas favoritas son:
+                    ul
+                        li
+                            h3 Linkin Park
+                            p ¡Los escucho desde la primaria y los seguiré escuchando!
+                        li
+                            h3 Rammstein
+                            p Mi abuela dice que hablan del diablo, no cierto.
+                        li
+                            h3 Muse
+                            p Igual los conozco desde niño.
+
+                include ../partials/footer.pug
+
+        script(src="/js/script_principal.js")

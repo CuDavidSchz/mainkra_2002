@@ -8,6 +8,10 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
+// Motor de renderizado
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/enviar-datos", (req, res) => {
@@ -35,7 +39,7 @@ const laboratoriosRoutes = require("./routes/laboratorios.routes");
 app.use(laboratoriosRoutes);
 
 // Archivos estáticos
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, ".." ,"public")));
 
 // Error
 app.use((req, res) => {
