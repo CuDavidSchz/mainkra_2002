@@ -1,3 +1,6 @@
+
+// Dependencias: 
+
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -25,19 +28,14 @@ app.post("/enviar-datos", (req, res) => {
     });
 });
 
-const homeRoutes = require("./routes/home");
+const homeRoutes = require("./routes/home.routes");
 app.use(homeRoutes);
 
-const laboratoriosRoutes = require("./routes/laboratorios");
+const laboratoriosRoutes = require("./routes/laboratorios.routes");
 app.use(laboratoriosRoutes);
 
 // Archivos estáticos
-app.use(express.static("public"));
-
-// Ruta principal
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+app.use(express.static(path.join(__dirname, "public")));
 
 // Error
 app.use((req, res) => {

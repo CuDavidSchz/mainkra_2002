@@ -1,18 +1,22 @@
-const express = require("express");
-const router = express.Router();
+const controller = {};
 const path = require("path");
 
-router.get("/datos", (req, res) => {
+// GETTERS 
+
+controller.getIndex = (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+};
+
+controller.getDatos = (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "html", "presentation", "datos.html"));
-});
+};
 
-router.get("/pasatiempos", (req, res) => {
+controller.getPasatiempos = (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "html", "presentation", "hobbies.html"));
-});
+};
 
-router.get("/musica", (req, res) => {
+controller.getMusic = (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "html", "presentation", "music.html"));
-});
+};
 
-
-module.exports = router;
+module.exports = controller;
