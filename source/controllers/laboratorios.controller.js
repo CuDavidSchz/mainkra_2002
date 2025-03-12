@@ -41,4 +41,14 @@ controller.getqLab12 = (req, res) => {
     );
 };
 
+controller.getqLab13 = (req, res) => {
+    res.render("labs/qLab13", 
+        {
+            title: "Laboratorio 13 - MVC",
+            isLab: true,
+        }
+    );
+};
+
+
 module.exports = controller;

@@ -12,4 +12,6 @@ router.get("/laboratorios/qLab5", controller.getqLab5);
 
 router.get("/laboratorios/qLab12", controller.getqLab12);
 
+router.get("/laboratorios/qLab13", controller.getqLab13);
+
 module.exports = router;

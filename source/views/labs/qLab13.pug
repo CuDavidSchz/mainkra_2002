@@ -1,0 +1,50 @@
+doctype html
+html(lang="es")
+    include ../partials/head.pug
+
+    body
+        main
+            div#content-wrap
+                h1 Laboratorios
+                
+                include ../partials/navbar.pug
+
+                section.questions
+                    h2 Preguntas Laboratorio 13 - MVC
+                    ol.questions-list
+                        li
+                            p P: ¿Qué beneficios encuentras en el estilo MVC?
+                            p R: Algunos beneficios son:
+                            ul
+                                p P: ¿Qué beneficios encuentras en el estilo MVC?
+                                p R: MVC permite una mejor organización del código, separando la lógica en tres capas:
+                                ul
+                                    li 
+                                        p b Modelo:  | Maneja la lógica de negocio y la base de datos.
+                                    li 
+                                        p b Vista:  | Se encarga de la presentación y la interfaz de usuario.
+                                    li 
+                                        p b Controlador:  | Procesa las solicitudes y decide qué datos enviar a la vista.
+                                p Esto facilita el mantenimiento, escalabilidad y reutilización del código, permitiendo trabajar en cada capa de manera independiente.
+                        
+                        li
+                            p P: ¿Encuentras alguna desventaja en el estilo arquitectónico MVC?
+                            p R: Personalmente me parece muy útil para darle mayor mantenibilidad al código. Sin embargo, he encontrado algunas deventajas: 
+                            ul
+                                li
+                                    p Puede aumentar la complejidad en proyectos pequeños, ya que obliga a crear más archivos y estructuras.
+                                li 
+                                    p Puede generar sobrecarga si no se maneja bien la comunicación entre capas.
+                                li 
+                                    p No siempre es la mejor opción para aplicaciones simples o de una sola página.
+                                    p A pesar de esto, su estructura modular lo hace ideal para aplicaciones escalables y de gran tamaño.
+                section
+                    h2 Referencias:
+                    ul.references
+                        li
+                            p MVC (Model, View, Controller) explicado. - Blog de Código Facilito. (n.d.). CódigoFacilito. https://codigofacilito.com/articulos/mvc-model-view-controller-explicado
+
+
+                include ../partials/footer.pug
+
+        script(src="/js/script_principal.js")

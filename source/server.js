@@ -14,29 +14,24 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({ extended: true }));
 
-app.post("/enviar-datos", (req, res) => {
-    const { nombre } = req.body;
+/*
+    R U T A S
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    if (!nombre) {
-        return res.status(400).send("El campo no puede estar vacío.");
-    }
-
-    const contenido = `Dato recibido: ${nombre}\n`;
-
-    fs.appendFile("datos-recibidos.txt", contenido, (err) => {
-        if (err) {
-            return res.status(500).send("Error al guardar los datos.");
-        }
-        
-        res.redirect("/");
-    });
-});
+*/ 
 
 const homeRoutes = require("./routes/home.routes");
 app.use(homeRoutes);
 
 const laboratoriosRoutes = require("./routes/laboratorios.routes");
 app.use(laboratoriosRoutes);
+
+const dataRoutes = require("./routes/data.routes");
+app.use("/", dataRoutes);
+
+/*
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+*/
 
 // Archivos estáticos
 app.use(express.static(path.join(__dirname, ".." ,"public")));
