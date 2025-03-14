@@ -1,0 +1,37 @@
+#master {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcomeContainer {
+    background-color: #1f1f1f;
+    width: 350px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+#welcomeContainer p {
+    color: whitesmoke;
+}
+
+#welcomeContainer button {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#welcomeContainer button:hover {
+    background-color: #a2a2a2; 
+    transform: scale(1.05); /* Aumenta tamaño al pasar el cursor */
+}

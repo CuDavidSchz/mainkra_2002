@@ -1,7 +1,12 @@
 const controller = {};
 const path = require("path");
 
-// GETTERS 
+/*
+
+    G E T T E R S 
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*/
 
 controller.getqLab1 = (req, res) => {
     res.render("labs/qLab1", 
@@ -49,6 +54,14 @@ controller.getqLab13 = (req, res) => {
         }
     );
 };
+
+/*
+
+    P O S T E R S  
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*/
+
 
 
 module.exports = controller;
