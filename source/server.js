@@ -6,6 +6,10 @@ const fs = require("fs");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 
+// Middlewares
+
+const userData = require("./middlewares/userData");
+
 const app = express();
 const PORT = 3000;
 
@@ -19,6 +23,9 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(cookieParser());
+
+app.use(userData.setUserData);
+
 app.use(express.urlencoded({ extended: true }));
 
 /*

@@ -5,8 +5,8 @@ html(lang="es")
     body
         main
             div#content-wrap
-                h1 Laboratorios
-                
+                h1 Sandbox
+                include ../partials/welcomeBar.pug
                 include ../partials/navbar.pug
 
                 section
@@ -37,4 +37,5 @@ html(lang="es")
 
                 include ../partials/footer.pug
 
-        script(src="/js/script_principal.js")
+        include ../partials/scripts.pug
+
