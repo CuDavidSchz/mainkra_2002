@@ -1,5 +1,6 @@
 div#master
     div#welcomeContainer
-        p Bienvenido, visitante
-        form(action="/login" method="POST")
-            button(type="submit") Iniciar sesión
+        p Bienvenido, #{nombre || "visitante"}
+        if !nombre
+            form(action="#" method="POST" onsubmit="guardarNombre(); return false;")
+                button(type="submit") Iniciar sesión

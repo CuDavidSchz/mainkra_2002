@@ -4,9 +4,12 @@ const path = require("path");
 // GETTERS 
 
 controller.getIndex = (req, res) => {
-    res.render("index", 
-        { title: "Inicio - Odio JavaScript"},
-    );
+    const nombre = req.cookies.nombre_usuario || null;
+    res.render("index",
+        {
+        title: "Inicio - Odio JavaScript",
+        nombre,
+        });
 };
 
 controller.getDatos = (req, res) => {

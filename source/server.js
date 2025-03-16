@@ -9,7 +9,12 @@ const cookieParser = require("cookie-parser");
 const app = express();
 const PORT = 3000;
 
-// Motor de renderizado
+/*
+    Middlewares para ejecutar módulos.
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*/
+
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
@@ -30,6 +35,9 @@ app.use(laboratoriosRoutes);
 
 const dataRoutes = require("./routes/data.routes");
 app.use("/", dataRoutes);
+
+const authRoutes = require("./routes/auth.routes");
+app.use("/", authRoutes);
 
 /*
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
