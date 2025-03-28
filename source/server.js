@@ -11,7 +11,7 @@ const cookieParser = require("cookie-parser");
 const userData = require("./middlewares/userData");
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 /*
     Middlewares para ejecutar módulos.
@@ -45,6 +45,9 @@ app.use("/", dataRoutes);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/", authRoutes);
+
+const datoRoutes = require("./routes/dato.routes");
+app.use("/", datoRoutes);
 
 /*
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

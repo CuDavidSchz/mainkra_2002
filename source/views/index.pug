@@ -13,15 +13,22 @@ html(lang="es")
                     h2 Mi nombre es David Cu
                     p Bienvenido a mis evidencias de TC2005B con Node.js
 
-                section.presentation
-                    h2 Probando enviar datos al servidor:
-                    form(action="/enviar-datos" method="POST")
-                        label(for="nombre") Envía un dato:
-                        input(type="text" id="nombre" name="nombre")
-                        br
-                        br
-                        button(type="submit") Enviar
+            section.presentation
+                h2 Enviar un dato a la base de datos:
+                form(action="/guardar-dato" method="POST")
+                    input(type="text" name="dato" required placeholder="Escribe algo...")
+                    button(type="submit") Enviar
+
+            section.presentation
+                h2 Datos almacenados:
+                if datos && datos.length
+                    ul
+                        each dato in datos
+                            li= dato.dato
+                else
+                    p No hay datos almacenados todavía.
+
 
             include ./partials/footer.pug
         include ./partials/scripts.pug 
-        
+

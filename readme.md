@@ -26,6 +26,11 @@ La página principal tiene una casilla para enviar un dato al servidor y este po
 - 15 - Marzo - 2025 
 1. **Laboratorio 14**: Se agregó una barra que permite guardar el nombre del usuario por 15 segundos recargando la página con una cookie. 
 
+- 27 - Marzo - 2025 
+1. **Laboratorio 17**: Jamás logré correr la base de datos en mis laboratorios. Fue un desastre, pero ya pude traer algunos registros en el laboratorio. Adjunto el commit: https://github.com/CuDavidSchz/monarch_systems/commit/518faaba9c9c317a3db73f7867d8f399e623a6a4
+
+Este fue un merge con mi funcionalidad para traer las instrucciones desde la base de datos
+
 ## Programación en parejas
 
 ### Laboratorio 9: Bases de Datos de Escritorio (MS Access)
