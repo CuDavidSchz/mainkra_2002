@@ -29,7 +29,7 @@ La página principal tiene una casilla para enviar un dato al servidor y este po
 - 27 - Marzo - 2025 
 1. **Laboratorio 17**: Jamás logré correr la base de datos en mis laboratorios. Fue un desastre, pero ya pude traer algunos registros en el laboratorio. Adjunto el commit: https://github.com/CuDavidSchz/monarch_systems/commit/518faaba9c9c317a3db73f7867d8f399e623a6a4
 
-Este fue un merge con mi funcionalidad para traer las instrucciones desde la base de datos
+Este fue un merge con mi funcionalidad para traer las instrucciones desde la base de datos.
 
 ## Programación en parejas
 
@@ -38,3 +38,12 @@ Este fue un merge con mi funcionalidad para traer las instrucciones desde la bas
 Trabaje con mi gran compañera Elizabeth. 
 
 https://github.com/Marel52/ElizabethOr_TC2005B/blob/main/A01424302_A01712135.accdb
+
+### Requisito Responder Prueba Terman: 
+Este requisito lo he trabajado con mi compañero Alejandro Adrian: 
+
+https://github.com/CuDavidSchz/monarch_systems/commit/a98685dafe18e1a5ff142cadcd5b4a22472da89e
+
+https://github.com/CuDavidSchz/monarch_systems/commit/ca5cd678665276baa21a29d9878cc4e24687ecf9
+
+https://github.com/CuDavidSchz/monarch_systems/commit/28c3d265c1b2beca91d0b64cafd60cab20366275
