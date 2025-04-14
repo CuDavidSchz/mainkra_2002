@@ -31,6 +31,19 @@ La página principal tiene una casilla para enviar un dato al servidor y este po
 
 Este fue un merge con mi funcionalidad para traer las instrucciones desde la base de datos.
 
+- 13 - Abril - 2025 
+1. **Ejercicio diagrama de despliegue**: https://drive.google.com/file/d/1EJMrj_x5NEyJNl629QBthh8YsVXATQ3s/view?usp=sharing
+
+2. **Ejercicio Normalización**: https://docs.google.com/document/d/1651aod65GDDzsUfZses8LbwGw-kaEh-WNcgP55mz6U0/edit?usp=sharing
+
+3. **Ejercicio: Diagramas de estado**: https://www.canva.com/design/DAGjaCN3MmA/DkgFooJZC_tzNHATtiqrFg/edit?utm_content=DAGjaCN3MmA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+4. **Lab 21: Funciones Agregadas y Sub-consultas**: https://docs.google.com/document/d/1NNPA2yZykmiypx_Kpc4QNFHT6Da09_Zie8fQ7BmhDis/edit?usp=sharing
+
+5. **Lab 24: AJAX**: https://github.com/CuDavidSchz/monarch_systems/commit/d3636534aca4b26936e14cdce63faf2b81407880
+
+6. **Lab 20: Consultas en SQL**:  https://docs.google.com/document/d/1wkd0Be_dpR7QIkEQhX4P1OIj5yfEr0t4pcaRB-i1hOw/edit?usp=sharing
+
 ## Programación en parejas
 
 ### Laboratorio 9: Bases de Datos de Escritorio (MS Access)
@@ -38,6 +51,10 @@ Este fue un merge con mi funcionalidad para traer las instrucciones desde la bas
 Trabaje con mi gran compañera Elizabeth. 
 
 https://github.com/Marel52/ElizabethOr_TC2005B/blob/main/A01424302_A01712135.accdb
+
+### Laboratorio 22: Subir y bajar archivos
+
+https://github.com/Marel52/ElizabethOr_TC2005B/commit/e3fb5ea22657014dfeddf4037163c350a6d9f0d3
 
 ### Requisito Responder Prueba Terman: 
 Este requisito lo he trabajado con mi compañero Alejandro Adrian: 
@@ -47,3 +64,5 @@ https://github.com/CuDavidSchz/monarch_systems/commit/a98685dafe18e1a5ff142cadcd
 https://github.com/CuDavidSchz/monarch_systems/commit/ca5cd678665276baa21a29d9878cc4e24687ecf9
 
 https://github.com/CuDavidSchz/monarch_systems/commit/28c3d265c1b2beca91d0b64cafd60cab20366275
+
+
